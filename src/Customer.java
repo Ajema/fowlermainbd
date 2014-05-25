@@ -25,9 +25,8 @@ class Customer {
             Rental each = (Rental) rentals.nextElement();
             frequentRenterPoints += each.getFrequentRenterPoints();
 //show figures for this rental
-            32
             result += "\t" + each.getMovie().getTitle() + "\t" +
-                    String.valueOf(each._movie.getCharge(each)) + "\n";
+                    String.valueOf(each._movie._price.getCharge(each)) + "\n";
         }
 //add footer lines
         result += "Amount owed is " +
@@ -45,7 +44,7 @@ class Customer {
             Rental each = (Rental) rentals.nextElement();
 //show figures for this rental
             result += "\t" + each.getMovie().getTitle() + "\t" +
-                    String.valueOf(each._movie.getCharge(each)) + "\n";
+                    String.valueOf(each._movie._price.getCharge(each)) + "\n";
         }
 //add footer lines
         result += "Amount owed is " +
@@ -78,7 +77,7 @@ class Customer {
             Rental each = (Rental) rentals.nextElement();
             //show figures for each rental
             result += each.getMovie().getTitle() + ": " +
-                    String.valueOf(each._movie.getCharge(each)) + "<BR>\n";
+                    String.valueOf(each._movie._price.getCharge(each)) + "<BR>\n";
         }
 //add footer lines
         result += "<P>You owe <EM>" + String.valueOf(getTotalCharge()) +
